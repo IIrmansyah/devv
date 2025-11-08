@@ -27,7 +27,7 @@
         overflow-x: hidden;
         font-family: 'Josefin Sans', sans-serif;
         color: white;
-        background: #000; /* Pastikan background fallback tetap hitam */
+        background: #000;
     }
     
     /* FIX: Memastikan Background di lapisan paling belakang dan menutupi layar */
@@ -60,12 +60,10 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        /* FIX: Gunakan -50% untuk transform-Y agar centering vertikal stabil */
-        transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%); /* Centering Mutlak Kunci Presisi HP */
         width: 90%; 
         max-width: 450px; 
         text-align: center;
-        /* Hapus opacity 0 dari sini, biarkan JS yang mengontrol setelah event klik */
         opacity: 1; /* FIX: Pastikan konten terlihat sebelum diubah JS */
         transition: opacity 1s ease-in-out, margin-top 1s ease-in-out;
         padding: 10px 0;
@@ -84,7 +82,7 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     #bq p {
-        font-size: 5vw; 
+        font-size: 5vw; /* Font size yang menyesuaikan lebar viewport (Kunci Kerapian Teks) */
         line-height: 1.4;
         margin: 10px 0;
         font-weight: 700;
@@ -127,7 +125,12 @@
 </head>
 <body>
 	
-   <audio src="https://feeldreams.github.io/matahari/matahari.mp3" id="linkmp3"></audio><script>audio = new Audio('' + linkmp3.src);</script>
+   <audio src="https://feeldreams.github.io/matahari/matahari.mp3" id="linkmp3"></audio>
+    <script>
+        const linkmp3Element = document.getElementById('linkmp3');
+        const audio = new Audio(linkmp3Element.src);
+        audio.loop = true; // Agar lagu berputar terus
+    </script>
    
    <div id="bodyblur">
      <img src="https://feeldreams.github.io/wp10.jpg" id="wallpaper"/><div id="beneranblur"></div>
@@ -183,7 +186,8 @@
   const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 100,}); const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const body = document.querySelector("body");function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
   function mulaikonten(){fungsi=1;suratin.style="display:none";ket.style="display:none";Content.style = "opacity:1;margin-top:4vh;";bodyblur.style="opacity:.4;animation:none";wallpaper.style="transform: scale(1);";bq.style = "position:relative;opacity:1;visibility:visible;margin-top:0;";
 
-                          audio.play();ftganti=0;ftmuncul();
+                          audio.play().catch(error => { console.log('Autoplay diblokir, tidak masalah jika pengguna sudah mengklik.'); }); // FIX LAGU: Play audio dengan error handling
+                          ftganti=0;ftmuncul();
                           setTimeout(fmulaiketik1,300);setTimeout(mulaiketik1,300);
                           setTimeout(fmulaiketik1b,2000);setTimeout(mulaiketik1b,2000);
                           setTimeout(fmulaiketik2,3955);setTimeout(mulaiketik2,3955);
