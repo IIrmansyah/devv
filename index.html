@@ -1,17 +1,127 @@
-<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-  
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://feeldreams.github.io/matahari/style.css" rel="stylesheet" type="text/css" />
-  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
-  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+<link href="https://feeldreams.github.io/matahari/style.css" rel="stylesheet" type="text/css" />
+<script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+
 <head>
 <title>forr uuuu</title>
 <meta name="description" content="forr uuuuL">
 <meta name="keywords" content="forr uuuu">
 <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+
+<style>
+    /* === PENTING: OPTIMASI MOBILE PRECISION === */
+
+    /* 1. Reset dan Font Dasar */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Mencegah scroll horizontal di HP */
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+    }
+
+    /* 2. Latar Belakang Penuh (Kunci Gambar Wallpaper) */
+    #bodyblur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+    #wallpaper {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* PASTIKAN gambar mengisi seluruh layar HP */
+        transition: transform 1s ease;
+    }
+    #beneranblur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Tambahkan overlay gelap untuk kontras teks */
+    }
+
+    /* 3. Pengaturan Konten Utama (Centering Mutlak di HP) */
+    #Content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centering Mutlak Kunci Presisi HP */
+        width: 90%; /* Menggunakan 90% lebar layar */
+        max-width: 450px; /* Batasan agar tidak terlalu lebar di tablet/desktop */
+        text-align: center;
+        transition: opacity 1s ease-in-out, margin-top 1s ease-in-out;
+        opacity: 0;
+        padding: 10px 0;
+    }
+
+    /* 4. Teks & Blockquote (Responsif Font Size) */
+    #ket {
+        font-size: 4vw; /* Font size responsif */
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    #bq {
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.4); 
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    #bq p {
+        font-size: 5vw; /* Font size yang menyesuaikan lebar viewport (Kunci Kerapian Teks) */
+        line-height: 1.4;
+        margin: 10px 0;
+        font-weight: 700;
+    }
+    @media (min-width: 600px) {
+        /* Batasi ukuran font di layar yang lebih besar (Tablet/Desktop) */
+        #bq p { font-size: 28px; }
+        #ket { font-size: 20px; }
+    }
+
+
+    /* 5. Gambar (Surat dan GIF) */
+    #suratin, #fotoakhir, #fotoakhir1, #fotoakhir2, #fotoAkhir {
+        width: 140px; /* Ukuran yang ideal untuk HP */
+        height: 140px;
+        margin: 0 auto 20px auto;
+        display: block; /* Memastikan mereka berada di baris sendiri */
+    }
+
+    /* 6. Tombol */
+    #Tombol {
+        margin-top: 25px;
+    }
+    #Tombol a {
+        display: inline-block;
+        background: #ff5757;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 8px;
+        font-size: 4.5vw; /* Font size tombol responsif */
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background 0.3s, transform 0.3s;
+    }
+    @media (min-width: 600px) {
+        #Tombol a { font-size: 22px; }
+    }
+</style>
+
 </head>
 <body>
 	
@@ -85,4 +195,4 @@
 </script>
 <script src="https://feeldreams.github.io/matahari/script.js"></script>
 </body>
-</html>     
+</html>
