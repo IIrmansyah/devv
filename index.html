@@ -1,0 +1,88 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://feeldreams.github.io/matahari/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+<head>
+<title>Script HTML</title>
+<meta name="description" content="Script HTML">
+<meta name="keywords" content="Script HTML">
+<link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+</head>
+<body>
+	
+   <audio src="https://feeldreams.github.io/matahari/matahari.mp3" id="linkmp3"></audio><script>audio = new Audio('' + linkmp3.src);</script>
+   
+   <div id="bodyblur">
+     <img src="https://feeldreams.github.io/wp10.jpg" id="wallpaper"/><div id="beneranblur"></div>
+   </div>
+
+   <div id='Content'>
+   	
+     <div id="suratin" onClick="memulai();">
+       <img src="https://rayyscoding.github.io/envelope.png"/>
+     </div>
+     <p id="ket">Klik Pesannya!</p>
+   
+     <div>
+                  <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotoakhir"/>
+         <img src="https://feeldreams.github.io/pandakuning.gif" id="fotoakhir1"/>
+         <img src="https://feeldreams.github.io/weee.gif" id="fotoakhir2"/>
+
+         <img src="https://feeldreams.github.io/smprt.gif" id="fotoAkhir"/>
+     </div>
+     <div><blockquote id='bq'>
+  
+              <p id="kalimat">Matahari Boleh Bersinar Terang..</p>
+       <p id="kalimata">Tapi Hanya Kamu yang Paling Aku Sayang 🥰</p>
+       <p id="kalimatb">Aacuaakss~</p>
+
+              <p id="kalimat2">Iyaa Ga Sih? 😉❤️</p>
+
+              <p id="kalimat3" style="opacity: 0;">Jawabanmu: </p>
+       <p id="kalimatb3" style="opacity: 0;">Kirim jawabannya ke WhatsApp aku yaa~</p>
+     </blockquote></div>
+   
+          <div id="Tombol">
+       <a id="By" onClick="multifungsi()">
+         <b id="tmbl">Lanjut</b>
+         <b id="tmbl2" style="display: none;">Selesai</b>
+       </a>
+     </div>
+     
+   </div>
+
+<script>
+  // FUNGSI MENDIRIKAN KE WHATSAPP DIHILANGKAN TOTAL
+  async function menuju(){
+    Tombol.style="opacity:1;transform: scale(1);";
+    // Mengganti teks tombol menjadi "Selesai" atau sejenisnya
+    document.getElementById("tmbl").style.display = "none";
+    document.getElementById("tmbl2").style.display = "inline";
+    document.getElementById("tmbl2").innerHTML = "Selesai";
+    await swals.fire('Terima kasih!', 'Pesannya sudah selesai ya.', 'success');
+    Tombol.onclick = () => {swals.fire('Done!', 'Semoga suka, ya!', 'success');}; // Tambahkan aksi klik "Selesai"
+  }
+  
+  const swalst = Swal.mixin({timer: 2777, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 100,}); const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const body = document.querySelector("body");function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
+  function mulaikonten(){fungsi=1;suratin.style="display:none";ket.style="display:none";Content.style = "opacity:1;margin-top:4vh;";bodyblur.style="opacity:.4;animation:none";wallpaper.style="transform: scale(1);";bq.style = "position:relative;opacity:1;visibility:visible;margin-top:0;";
+
+                          audio.play();ftganti=0;ftmuncul();
+                          setTimeout(fmulaiketik1,300);setTimeout(mulaiketik1,300);
+                          setTimeout(fmulaiketik1b,2000);setTimeout(mulaiketik1b,2000);
+                          setTimeout(fmulaiketik2,3955);setTimeout(mulaiketik2,3955);
+                         }
+  
+   // FUNGSI JAWABAN DIHILANGKAN TOTAL
+   async function jawab(){
+           await swals.fire('Terima kasih!', 'Pesan sudah selesai.', 'success');
+           menuju(); // Langsung pindah ke tahap akhir (menuju)
+       }
+</script>
+<script src="https://feeldreams.github.io/matahari/script.js"></script>
+</body>
+</html>
